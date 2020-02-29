@@ -9,7 +9,7 @@ module.exports.webhook = (event, context, callback) => {
   });
   S3.putObject({
     Bucket: 'local-bucket',
-    Key: '12345678',
+    Key: 'docs/12345678',
     Body: new Buffer('abcd'),
   }, () => { callback(null, 'ok'); });
 };

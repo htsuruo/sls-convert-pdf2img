@@ -69,6 +69,8 @@ custom:
     directory: ./s3_local
 
 functions:
+  webhook:
+    handler: handler.webhook
   s3hook:
     handler: handler.s3hook
     events:
