@@ -10,6 +10,8 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
+    "aws-sdk": "^2.630.0",
+    "pdfjs-dist": "^2.2.228",
     "source-map-support": "^0.5.10"
   },
   "devDependencies": {
