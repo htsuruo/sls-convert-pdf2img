@@ -1,5 +1,5 @@
 service:
-  name: sls-test
+  name: sls-convert-pdf2img
 # app and org for use with dashboard.serverless.com
 #app: your-app-name
 #org: your-org-name
@@ -35,7 +35,8 @@ functions:
     handler: handler.s3hook
     events:
       - s3:
-          bucket: local-bucket
+          # bucket: local-bucket
+          bucket: chiyell-development
           events:
             - "s3:ObjectCreated:*"
           rules:
