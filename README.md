@@ -16,8 +16,11 @@ $ npm i
 $ npm start
 ( $ npx sls offline start )
 
+# put object to s3 bucket
+$ npm run put [filePath]
+
 # run a function
-$ npm run func -- [functionName]
+$ npm run func [functionName]
 
 ```
 

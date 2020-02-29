@@ -6,6 +6,7 @@
   "scripts": {
     "start": "sls offline start",
     "func": "sls invoke local --function",
+    "put": "aws --endpoint http://localhost:8000 s3api put-object --bucket local-bucket --key docs/ --profile s3rver --body",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
