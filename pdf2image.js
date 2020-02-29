@@ -1,5 +1,5 @@
 /* eslint-disable no-await-in-loop */
-import PDFJS from 'pdfjs-dist';
+const PDFJS = require('pdfjs-dist')
 
 class Pdf2Image {
   /**
