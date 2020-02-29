@@ -1,0 +1,22 @@
+{
+  "name": "sls-convert-pdf2img",
+  "version": "1.0.0",
+  "description": "convert pdf to image on aws lambda function with S3 events.",
+  "main": "handler.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HTsuruo/sls-convert-pdf2img.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HTsuruo/sls-convert-pdf2img/issues"
+  },
+  "homepage": "https://github.com/HTsuruo/sls-convert-pdf2img#readme",
+  "devDependencies": {
+    "serverless-offline": "^5.12.1"
+  }
+}
