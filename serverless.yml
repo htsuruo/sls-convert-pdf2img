@@ -69,13 +69,13 @@ custom:
     directory: ./s3_local
 
 functions:
-  webhook:
-    handler: handler.webhook
+  # webhook:
+  #   handler: handler.webhook
   s3hook:
     handler: handler.s3hook
     events:
       - s3:
-          bucket: local-bucket
+          bucket: chiyell-development
           events:
             - "s3:ObjectCreated:*"
           rules:
