@@ -18,6 +18,7 @@
   "homepage": "https://github.com/HTsuruo/sls-convert-pdf2img#readme",
   "devDependencies": {
     "pdfjs-dist": "^2.2.228",
-    "serverless-offline": "^5.12.1"
+    "serverless-offline": "^5.12.1",
+    "serverless-s3-local": "^0.5.4"
   }
 }
