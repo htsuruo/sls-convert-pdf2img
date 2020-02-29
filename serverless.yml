@@ -63,12 +63,17 @@ plugins:
   - serverless-offline
   - serverless-s3-local
 
+custom:
+  s3:
+    port: 8000
+    directory: ./s3-local
+
 functions:
-  hello:
-    handler: handler.hello
+  s3hook:
+    handler: handler.s3hook
     events:
       - s3:
-          bucket: chiyell-development
+          bucket: local-bucket
           events:
             - "s3:ObjectCreated:*"
           rules:
@@ -115,12 +120,12 @@ functions:
 #      variable2: value2
 
 # you can add CloudFormation resource templates here
-#resources:
+# resources:
 #  Resources:
 #    NewResource:
 #      Type: AWS::S3::Bucket
 #      Properties:
-#        BucketName: my-new-bucket
+#        BucketName: local-bucket
 #  Outputs:
 #     NewOutput:
 #       Description: "Description for the output"

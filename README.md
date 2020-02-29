@@ -30,7 +30,22 @@ $ npx sls deploy -v
 # delete project
 $ npx sls remove
 
+# put object to s3
+$ aws --endpoint http://localhost:8000 s3api put-object --bucket local-bucket --key docs/ --body ~/Desktop/test.pdf --profile s3rver
+※ accessid and keyid ⇒ [ S3RVER ]
+
+# run function
+$ npx sls invoke local --function functionName
+
 ```
+
+## AWS - Invoke Local.
+
+```
+serverless invoke local --function functionName
+```
+* https://serverless.com/framework/docs/providers/aws/cli-reference/invoke-local/
+
 
 ## Ref.
 * Serverless Frameworkの使い方まとめ
