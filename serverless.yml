@@ -23,6 +23,9 @@ service: sls-convert-pdf2img
 provider:
   name: aws
   runtime: nodejs12.x
+  stage: stg
+  region: ap-northeast-1
+  profile: chiyell
 
 # you can overwrite defaults here
 #  stage: dev
@@ -56,6 +59,9 @@ provider:
 #  exclude:
 #    - exclude-me.js
 #    - exclude-me-dir/**
+plugins:
+  - serverless-offline
+  # - serverless-s3-local
 
 functions:
   hello:
