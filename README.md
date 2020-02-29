@@ -6,10 +6,19 @@ convert pdf to image on aws lambda function with S3 events.
 * runtime: aws node.js 12.x
 
 
-## Build.
+## How to Run.
 
 ```
+# package install
 $ npm i
+
+# run local server
+$ npm start
+( $ npx sls offline start )
+
+# run a function
+$ npm run func -- [functionName]
+
 ```
 
 ## Command Memo.
@@ -57,3 +66,5 @@ serverless invoke local --function functionName
 	* https://qiita.com/horike37/items/b295a91908fcfd4033a2
 * Serverless + TypeScript + AWS Lambdaの開発環境構築
 	* http://suguru03.hatenablog.com/entry/2019/01/16/150326
+* npm-scriptsについて
+	* https://qiita.com/axross/items/a2a0d148e40b66074858

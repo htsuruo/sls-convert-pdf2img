@@ -1,2 +1,3 @@
 node_modules/
 .serverless/
+s3_local/local-bucket/

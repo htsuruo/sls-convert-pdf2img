@@ -4,6 +4,8 @@
   "description": "convert pdf to image on aws lambda function with S3 events.",
   "main": "handler.js",
   "scripts": {
+    "start": "sls offline start",
+    "func": "sls invoke local --function",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
