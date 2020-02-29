@@ -35,10 +35,11 @@ functions:
     handler: handler.s3hook
     events:
       - s3:
-          # bucket: local-bucket
-          bucket: chiyell-development
+          bucket: local-bucket
+          # bucket: chiyell-development
           events:
             - "s3:ObjectCreated:*"
           rules:
+            - prefix: docs/
             - suffix: .pdf
           existing: true
