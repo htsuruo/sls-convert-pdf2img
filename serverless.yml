@@ -27,8 +27,8 @@ plugins:
 provider:
   name: aws
   runtime: nodejs12.x
-  apiGateway:
-    minimumCompressionSize: 1024 # Enable gzip compression for responses > 1 KB
+  # apiGateway:
+  #   minimumCompressionSize: 1024 # Enable gzip compression for responses > 1 KB
   environment:
     AWS_NODEJS_CONNECTION_REUSE_ENABLED: 1
   stage: ${opt:stage, self:custom.defaultStage}
@@ -49,5 +49,4 @@ functions:
             - suffix: .pdf
           existing: true
     environment:
-      BUCKET_NAME: ${self:custom.environments.${self:provider.stage}.BUCKET_NAME}
       END_POINT: ${self:custom.environments.${self:provider.stage}.END_POINT}

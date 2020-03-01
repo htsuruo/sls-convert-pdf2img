@@ -1,6 +1,5 @@
 import { APIGatewayProxyHandler } from 'aws-lambda';
 import 'source-map-support/register';
-// import S3 from 'aws-sdk/clients/s3';
 import AWS from 'aws-sdk';
 import fs from 'fs';
 // import pdfjs from 'pdfjs-dist';
@@ -8,7 +7,6 @@ import fs from 'fs';
 const END_POINT = process.env.END_POINT
 
 export const s3hook = async (event, _context) => {
-  // console.log('bucket name is: ' +  process.env.BUCKET_NAME);
   const fm = new FileManager(event)
   const params: any = {
     Bucket: fm.bucketname,
