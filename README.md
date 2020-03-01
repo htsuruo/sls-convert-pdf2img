@@ -41,8 +41,11 @@ $ npx sls create -t aws-nodejs -p my-service
 # offline start
 $ npx sls offline start
 
-# deploy 
+# deploy
 $ npx sls deploy -v
+
+# deploy with stage
+$ npx sls deploy --stage prod
 
 # delete project
 $ npx sls remove

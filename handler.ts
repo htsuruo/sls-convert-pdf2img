@@ -5,9 +5,10 @@ import AWS from 'aws-sdk';
 import fs from 'fs';
 // import pdfjs from 'pdfjs-dist';
 
-const END_POINT = 'http://localhost:8000'
+const END_POINT = process.env.END_POINT
 
 export const s3hook = async (event, _context) => {
+  // console.log('bucket name is: ' +  process.env.BUCKET_NAME);
   const fm = new FileManager(event)
   const params: any = {
     Bucket: fm.bucketname,
@@ -22,6 +23,7 @@ export const s3hook = async (event, _context) => {
     secretAccessKey: 'S3RVER',
   });
   const v = fs.readFileSync('/Users/tsuruoka/Desktop/test2.pdf')
+  // const v = fs.readFileSync('/Users/tsuruoka/Desktop/test2.pdf')
   // const v = pdfjs.getDocument({ url: fm.url })
   params.Body = v
   console.log(params)

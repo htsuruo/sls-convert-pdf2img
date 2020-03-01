@@ -11,6 +11,11 @@ custom:
   s3:
     port: 8000
     directory: ./s3_local
+  defaultStage: dev
+  environments:
+    dev: ${file(./config/dev.yml)}
+    stg: ${file(./config/stg.yml)}
+    prd: ${file(./config/prod.yml)}
 
 # Add the serverless-webpack plugin
 plugins:
@@ -25,7 +30,7 @@ provider:
     minimumCompressionSize: 1024 # Enable gzip compression for responses > 1 KB
   environment:
     AWS_NODEJS_CONNECTION_REUSE_ENABLED: 1
-  stage: stg
+  stage: ${opt:stage, self:custom.defaultStage}
   region: ap-northeast-1
   profile: chiyell
 
@@ -35,11 +40,14 @@ functions:
     handler: handler.s3hook
     events:
       - s3:
-          bucket: local-bucket
-          # bucket: chiyell-development
+          # bucket: local-bucket
+          bucket: ${self:custom.environments.${self:provider.stage}.BUCKET_NAME}
           events:
             - "s3:ObjectCreated:*"
           rules:
             - prefix: docs/
             - suffix: .pdf
           existing: true
+    environment:
+      BUCKET_NAME: ${self:custom.environments.${self:provider.stage}.BUCKET_NAME}
+      END_POINT: ${self:custom.environments.${self:provider.stage}.END_POINT}
