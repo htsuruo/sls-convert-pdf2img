@@ -10,6 +10,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
+    "@jeylabs/aws-lambda-poppler": "^2.0.2",
     "aws-sdk": "^2.630.0",
     "pdfjs-dist": "^2.2.228",
     "source-map-support": "^0.5.10"

@@ -72,5 +72,7 @@ serverless invoke local --function functionName
 	* https://qiita.com/horike37/items/b295a91908fcfd4033a2
 * Serverless + TypeScript + AWS Lambdaの開発環境構築
 	* http://suguru03.hatenablog.com/entry/2019/01/16/150326
+* Serverless Frameworkで環境変数を外部ファイルから読み込み、環境毎に自動で切り替えてみる
+	* https://dev.classmethod.jp/cloud/serverless-framework-conf-change/
 * npm-scriptsについて
 	* https://qiita.com/axross/items/a2a0d148e40b66074858
