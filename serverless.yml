@@ -11,8 +11,9 @@ custom:
   s3:
     port: 8000
     directory: ./s3_local
-  defaultStage: dev
+  defaultStage: local
   environments:
+    local: ${file(./config/local.yml)}
     dev: ${file(./config/dev.yml)}
     stg: ${file(./config/stg.yml)}
     prd: ${file(./config/prod.yml)}
@@ -40,7 +41,6 @@ functions:
     handler: handler.s3hook
     events:
       - s3:
-          # bucket: local-bucket
           bucket: ${self:custom.environments.${self:provider.stage}.BUCKET_NAME}
           events:
             - "s3:ObjectCreated:*"

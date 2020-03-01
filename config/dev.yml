@@ -1,2 +1,2 @@
-END_POINT: http://localhost:8000/
+END_POINT: https://chiyell-development.s3-ap-northeast-1.amazonaws.com/
 BUCKET_NAME: chiyell-development
